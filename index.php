@@ -112,7 +112,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="index.html">
+                        <a href="index.php">
                             ระบบคำนวณภาษีที่ดินจากแผนที่กรมที่ดิน
                         </a>
                         <a class="mobile-options waves-effect waves-light">
@@ -191,7 +191,7 @@
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="auth-normal-sign-in.html">
+                                        <a href="login.php" onclick="return confirm('คุณต้องการออกจากระบบหรือไม่?');">
                                             <i class="ti-layout-sidebar-left"></i> Logout
                                         </a>
                                     </li>
@@ -219,7 +219,7 @@
                                         <li class="more-details">
                                             <a href="user-profile.html"><i class="ti-user"></i>View Profile</a>
                                             <a href="#!"><i class="ti-settings"></i>Settings</a>
-                                            <a href="auth-normal-sign-in.html"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                            <a href="logout.php" onclick="return confirm('คุณต้องการออกจากระบบหรือไม่?');"><i class="ti-layout-sidebar-left"></i>Logout</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -235,7 +235,7 @@
                             </div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="active">
-                                    <a href="index.html" class="waves-effect waves-dark">
+                                    <a href="index.php" class="waves-effect waves-dark">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                         <span class="pcoded-mtext">หน้าแรก</span>
                                         <span class="pcoded-mcaret"></span>
@@ -252,28 +252,28 @@
                                     </a>
                                     <ul class="pcoded-submenu">
                                         <li class=" ">
-                                            <a href="Residence.html" class="waves-effect waves-dark">
+                                            <a href="Residence.php" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                                 <span class="pcoded-mtext">ที่อยู่อาศัย</span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="Agriculture.html" class="waves-effect waves-dark">
+                                            <a href="Agriculture.php" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                                 <span class="pcoded-mtext">เกษตรกรรม</span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
                                         <li class="">
-                                            <a href="Industry.html" class="waves-effect waves-dark">
+                                            <a href="Industry.php" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                                 <span class="pcoded-mtext">อุตสาหกรรม</span>
                                                 <span class="pcoded-mcaret"></span>
                                             </a>
                                         </li>
                                         <li class=" ">
-                                            <a href="Wasteland.html" class="waves-effect waves-dark">
+                                            <a href="Wasteland.php" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                                 <span class="pcoded-mtext">ที่ดินรกร้าง</span>
                                                 <span class="pcoded-mcaret"></span>
@@ -302,7 +302,7 @@
                                     </a>
                                     <ul class="pcoded-submenu">
                                         <li class="">
-                                            <a href="auth-normal-sign-in.html" class="waves-effect waves-dark">
+                                            <a href="login.php" class="waves-effect waves-dark">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
                                                 <span class="pcoded-mtext">Login</span>
                                                 <span class="pcoded-mcaret"></span>

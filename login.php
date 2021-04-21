@@ -1,8 +1,9 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Material Able bootstrap admin template by Codedthemes</title>
+    <title>ระบบคำนวณภาษีที่ดิน</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -18,7 +19,7 @@
       <meta name="author" content="Codedthemes" />
       <!-- Favicon icon -->
 
-      <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+      <link rel="icon" href="assets/icon/4426-removebg-preview.png" type="image/x-icon">
       <!-- Google font-->
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
       <!-- Required Fremwork -->
@@ -98,9 +99,10 @@
                 <div class="col-sm-12">
                     <!-- Authentication card start -->
 
-                        <form class="md-float-material form-material">
+                        <form class="md-float-material form-material" method="post" action="checklogin.php">
                             <div class="text-center">
-                                <img src="assets/images/logo.png" alt="logo.png">
+                                <!-- <img src="assets/images/logo.png" alt="logo.png"> --> 
+                                <h4>ระบบคำนวณภาษีที่ดินจากแผนที่กรมที่ดิน</h4>
                             </div>
                             <div class="auth-box card">
                                 <div class="card-block">
@@ -110,12 +112,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group form-primary">
-                                        <input type="text" name="email" class="form-control">
+                                        <input type="text" name="m_username" class="form-control" >
                                         <span class="form-bar"></span>
-                                        <label class="float-label">Your Email Address</label>
+                                        <label class="float-label">Username</label>
                                     </div>
                                     <div class="form-group form-primary">
-                                        <input type="password" name="password" class="form-control">
+                                        <input type="password" name="m_pass" class="form-control" >
                                         <span class="form-bar"></span>
                                         <label class="float-label">Password</label>
                                     </div>
@@ -135,14 +137,14 @@
                                     </div>
                                     <div class="row m-t-30">
                                         <div class="col-md-12">
-                                            <button type="button" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign in</button>
+                                            <button type="submit" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign in</button>
                                         </div>
                                     </div>
                                     <hr/>
                                     <div class="row">
                                         <div class="col-md-10">
                                             <p class="text-inverse text-left m-b-0">Thank you.</p>
-                                            <p class="text-inverse text-left"><a href="index.html"><b>Back to website</b></a></p>
+                                            <p class="text-inverse text-left"><a href="index.php"><b>Back to website</b></a></p>
                                         </div>
                                         <div class="col-md-2">
                                             <img src="assets/images/auth/Logo-small-bottom.png" alt="small-logo.png">
