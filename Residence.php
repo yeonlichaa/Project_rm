@@ -305,6 +305,139 @@
                             <div class="main-body">
                                 <div class="page-wrapper">
                                     <!-- Page-body start -->
+
+                                    ใส่ขนาดที่ดิน <br>
+
+                                
+                            
+                                    <form>
+                                        <input type="text" name="rai" id="rai" pattern="[0-9]{1,5}" title="กรุณาระบุไร่ ตั้งแต่ 0 แต่ไม่เกิน 99,999">ไร่ <!--รับขนาดไร่ -->
+                                        <input type="text" name="ngan" id="ngan" pattern="[0-3]" title="กรุณาระบุงาน ตั้งแต่ 0 แต่ไม่เกิน 3">งาน 
+                                        <input type="text" name="tarangwa" id="tarangwa" pattern="[0-9]{1,3}" title="กรุณาระบุตาราง.วา ตั้งแต่ 0 แต่ไม่เกิน 99.9">ตารางวา<br><br>
+                                        
+                                        ราคาประเมินต่อตารางวา<input type="text" name="values" id="values" pattern="[0-9]{1,}" >บาท <br><br>
+
+                                        <button type="button" name="math" class="btn btn-primary">คำนวณ</button> <br>
+                                        <!-- ขนาดที่ดิน <input type="text" name="sum" >ตารางวา<br><br>  ไร่ *4  + งาน * 100 -->
+                                        ขนาดที่ดิน <p id="sum"></p><br><br>  <!--ไร่ *4  + งาน * 100-->
+
+                                        
+                                        
+                                        <!-- มูลค่าที่ดิน <input type="text" name="valpramern" >บาท<br><br> -->
+                                        มูลค่าที่ดิน <k id="landval"></k><br><br>
+                                        
+                                        <!-- ภาษีที่ต้องจ่าย <input type="text" name="resulttax" > บาท <br> -->
+                                        ภาษีที่ต้องจ่าย :<div id="showtax"></div>
+                                      
+                                        <button onclick="document.getElementById('showtax').value = ''">Clear input field</button> <!--ยังไม่เสร็จ-->
+                                        
+
+                                        <script>
+                                            var objK = document.getElementById("landval");
+                                            var objDiv = document.getElementById("showtax");
+                                            var objP = document.getElementById("sum");
+                                           var button = document.querySelector("[name='math']");
+                                            button.addEventListener("click",function(){
+                                            var a = document.querySelector("[name='rai']").value;
+                                            var b = document.querySelector("[name='ngan']").value;
+                                            var c = document.querySelector("[name='tarangwa']").value;
+                                            var d = document.querySelector("[name='values']").value;
+                                                
+                                            a = (isNaN(a) || a==="")?0:parseFloat(a);
+                                            b = (isNaN(b) || b==="")?0:parseFloat(b);
+                                            c = (isNaN(c) || c==="")?0:parseFloat(c);
+                                            d = (isNaN(d) || d==="")?0:parseFloat(d);
+
+                                        //    var a1 =String
+                                        //         a1 = "not pending";
+
+                                                // let a1 = "not pending";
+
+                                            
+
+                                            var shipping = (((a*4)+b)*100)+c;
+                                            var shipping2 = shipping*d;
+
+                                            objP.innerHTML = shipping + "ตารางวา";
+                                            objK.innerText = shipping2 + "บาท";
+
+                                            a1 = "not pending";
+                                            a2 = ((shipping2 - 50000000)  * (0.0003))+2500;
+                                            a3 = ((shipping2 - 75000000)  * (0.0005))+10000;
+                                            a4 = ((shipping2 - 100000000) * (0.0007))+210000;
+                                            a5 = ((shipping2 - 500000000) * (0.0007))+210000;
+
+
+                                            if(shipping2 <= 50000000.00)
+                                                objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนสนเงิน "+a1 +"บาท";
+                                            else if(shipping2<= 75000000)
+                                                objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนสนเงิน "+a2 +"บาท 0.03%" ;
+                                            else if(shipping2 > 75000000 && shipping2 <= 100000000)
+                                                objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนสนเงิน "+a3 +"บาท 0.05%";
+                                            else if(shipping2 > 100000000 && shipping2 <= 500000000)
+                                                objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนสนเงิน "+a4 +"บาท 0.07%";  
+                                            else if(shipping2 > 500000000 && shipping2 <= 1000000000)
+                                                objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนสนเงิน "+a5 +"บาท";  
+
+
+                                            
+                                            
+                                            // document.querySelector("[name='sum']").value = shipping.toFixed(2);
+                                            // document.querySelector("[name='valpramern']").value = shipping2.toFixed(2);
+
+
+
+                                             // document.querySelector("[name='resulttax']").value = a1.toFixed(2);
+                                            });
+
+                                            // function calculateGrade()
+                                            // {
+                                            // var g = document.getElementById("g").value;
+                                            // var objDiv = document.getElementById("showGrade");
+
+                                            // a1 = "not pending";
+                                            // a2 = 5000;
+                                            // a3 = 10;
+                                            // a4 = (a2*5)+a3;
+ 
+                                            
+                                            // if(g >= 80)
+                                            //     objDiv.innerHTML = "ได้เกรด A " + a4;
+                                            // else if(g >= 70)
+                                            //     objDiv.innerHTML = "ได้เกรด B";
+                                            // else if(g >= 60)
+                                            //     objDiv.innerHTML = "ได้เกรด C";
+                                            // else if(g >= 50)
+                                            //     objDiv.innerHTML = "ได้เกรด D";
+                                            // else
+                                            //     objDiv.innerHTML = "ได้เกรด F";
+                                            // }
+
+
+                                        </script>
+                                        
+                                        <!-- เกรด <input type="text" name="g" id="g">
+                                        
+                                        <input type="button" value="คำนวณเกรด" onclick="calculateGrade()"> -->
+                                        <!-- <div id="showGrade"></div> -->
+
+
+                                        <br>
+                                        <!-- <div class="mb-3">
+                                           <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                        </div>
+                                        <div class="mb-3">
+                                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                                          <input type="password" class="form-control" id="exampleInputPassword1">
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                        </div> -->
+                                        
+                                      </form>
                             
                                     <!-- Page-body end -->
                                 </div>
