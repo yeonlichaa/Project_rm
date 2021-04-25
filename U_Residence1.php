@@ -235,7 +235,7 @@ if($m_level != 'member'){
                 </form>
         </div>
         <div>
-            <a href="cal.php"><button class="btn btn-danger waves-effect waves-light">ย้อนกลับ</button></a>
+            <a href="U_Residence.php"><button class="btn btn-danger waves-effect waves-light">ย้อนกลับ</button></a>
         </div>
         <!--                 end buttons		         -->
       </div>
