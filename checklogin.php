@@ -30,14 +30,14 @@
                   if($_SESSION["m_level"]=="admin"){ //ถ้าเป็น admin ให้กระโดดไปหน้า admin_page.php
 
                     //echo 'R U Admin';
-                    Header("Location: admin/");
+                    Header("Location: admin.php");
 
                   }
 
                   if ($_SESSION["m_level"]=="member"){  //ถ้าเป็น member ให้กระโดดไปหน้า user_page.php
                     
-                    echo 'R U Member';
-                    //Header("Location: user_page.php");
+                    //echo 'R U Member';
+                    Header("Location: user.php");
 
                   }
 

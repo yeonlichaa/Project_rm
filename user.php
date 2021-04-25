@@ -1,16 +1,27 @@
-<!--
-=========================================================
-Material Kit - v2.0.7
-=========================================================
+<?php 
+session_start();
+//cho '<pre>';
+//print_r($_SESSION);
+//echo '<pre>';
 
-Product Page: https://www.creative-tim.com/product/material-kit
-Copyright 2020 Creative Tim (https://www.creative-tim.com/)
+include('condb.php');
 
-Coded by Creative Tim
+//สร้างตัวแปรจาก session
+$m_id = $_SESSION['m_id'];
+$m_username = $_SESSION['m_username'];
+$m_level = $_SESSION['m_level'];
 
-=========================================================
+//echo $m_id;
+//echo '<br>';
+//echo $m_username;
+//echo '<br>';
+//echo $m_level;
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+//สร้างเงื่อนไขการตรวจสอบสิทธิ์ user
+if($m_level != 'member'){
+    Header("Location: logout.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +47,7 @@ The above copyright notice and this permission notice shall be included in all c
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="user.php">
           ระบบคำนวณภาษีที่ดิน </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -49,17 +60,14 @@ The above copyright notice and this permission notice shall be included in all c
         <ul class="navbar-nav ml-auto">
           <li class="dropdown nav-item">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">account_circle</i> เข้าสู่ระบบ
+              <i class="material-icons">account_circle</i> สวัสดี คุณ <?php echo $m_username; ?>
             </a>
             <div class="dropdown-menu dropdown-with-icons">
-              <a href="login.php" class="dropdown-item">
-                <i class="material-icons">login</i> Sign in
-              </a>
-              <a href="register.php" class="dropdown-item">
-                <i class="material-icons">content_paste</i> Sign up
+              <a href="index.php" class="dropdown-item" onclick="return confirm('คุณต้องการออกจากระบบหรือไม่?');">
+                <i class="material-icons">logout</i> log out
               </a>
             </div>
-          </li> 
+          </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
               <i class="material-icons">cloud_download</i> คำนวณภาษีที่ดิน
@@ -67,7 +75,7 @@ The above copyright notice and this permission notice shall be included in all c
           </li> -->
           <!-- <li class="nav-item">
             <a class="nav-link" href="login.php" target="_blank">
-              <i class="material-icons">unarchive</i> เข้าสู่ระบบ
+              <i class="material-icons">unarchive</i>สวัสดี คุณ <?php echo $m_username; ?>
             </a>
           </li> -->
           <!-- <li class="nav-item">
@@ -96,7 +104,7 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="brand">
             <h1>ยินดีต้อนรับ</h1>
             <h3>เข้าสู่ระบบคำนวณภาษีที่ดินจากแผนที่กรมที่ดิน</h3>
-            <a href="Guest_user_cal.php"><h2><button class="btn btn-success waves-effect waves-light">คำนวณภาษีที่ดิน</button></h2></a>
+            <a href="cal.php"><h2><button class="btn btn-success waves-effect waves-light">คำนวณภาษีที่ดิน</button></h2></a>
           </div>
         </div>
       </div>
