@@ -24,7 +24,7 @@ The above copyright notice and this permission notice shall be included in all c
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Prompt:300,400,500,700|Prompt+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="./assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />

@@ -124,13 +124,12 @@ if($m_level != 'member'){
           <div class="title">
             เลือกประเภทที่ดินที่จะคำนวณ
           </div>
-          <a href="Residence.php"><button class="btn btn-primary waves-effect waves-light">ที่อยู่อาศัย</button></a>
-          <a href="Agriculture.php"><button class="btn btn-success waves-effect waves-light">เกษตรกรรม</button></a>
-          <a href="Industry.php"><button class="btn btn-warning waves-effect waves-light">อุตสาหกรรม</button></a>
-          <a href="Wasteland.php"><button class="btn btn-info waves-effect waves-light">ที่ดินรกร้าง</button></a>
+          <a href="Residence1.php"><button class="btn btn-primary waves-effect waves-light">ที่อยู่อาศัย(เป็นเจ้าของที่ดินและสิ่งปลูกสร้าง)</button></a>
+          <a href="Residence2.php"><button class="btn btn-success waves-effect waves-light">ที่อยู่อาศัย(เป็นเจ้าของเฉพาะสิ่งปลูกสร้าง)</button></a>
+          <a href="Residence3.php"><button class="btn btn-warning waves-effect waves-light">ที่อยู่อาศัย(บ้านหลังอื่นๆ)</button></a>
         </div>
         <div>
-            <a href="index.php"><button class="btn btn-danger waves-effect waves-light">ย้อนกลับ</button></a>
+            <a href="Guest_user_cal.php"><button class="btn btn-danger waves-effect waves-light">ย้อนกลับ</button></a>
         </div>
         <!--                 end buttons		         -->
       </div>

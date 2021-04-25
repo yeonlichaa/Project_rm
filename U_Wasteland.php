@@ -172,23 +172,20 @@ if($m_level != 'member'){
                       objP.innerHTML = shipping + "ตารางวา";
                       objK.innerText = shipping2 + "บาท";
 
-                      a1 = "not pending";
-                      a2 = ((shipping2 - 50000000)  * (0.0003))+2500;
-                      a3 = ((shipping2 - 75000000)  * (0.0005))+10000;
-                      a4 = ((shipping2 - 100000000) * (0.0007))+210000;
-                      a5 = ((shipping2 - 500000000) * (0.0007))+210000;
+                      a2 = shipping2 * 0.003;
+                      a3 = ((shipping2 - 50000000)  * (0.0004))+150000;
+                      a4 = ((shipping2 - 200000000) * (0.005))+750000;
+                      a5 = ((shipping2 - 1000000000) * (0.006))+9750000;
 
 
                       if(shipping2 <= 50000000.00)
-                          objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนสนเงิน "+a1 +"บาท";
-                      else if(shipping2<= 75000000)
-                          objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนสนเงิน "+a2 +"บาท 0.03%" ;
-                      else if(shipping2 > 75000000 && shipping2 <= 100000000)
-                          objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนสนเงิน "+a3 +"บาท 0.05%";
-                      else if(shipping2 > 100000000 && shipping2 <= 500000000)
-                          objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนสนเงิน "+a4 +"บาท 0.07%";  
-                      else if(shipping2 > 500000000 && shipping2 <= 1000000000)
-                          objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนสนเงิน "+a5 +"บาท";  
+                          objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนวนเงิน "+a2 +"บาท";
+                      else if(shipping2 > 50000000 && shipping2 <= 200000000)
+                          objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนวนเงิน "+a3 +"บาท 0.03%" ;
+                      else if(shipping2 > 200000000 && shipping2 <= 1000000000)
+                          objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนวนเงิน "+a4 +"บาท 0.05%";
+                      else if(shipping2 > 1000000000)
+                          objDiv.innerHTML = "ต้องเสียภาษีรายปีเป็นจำนวนเงิน "+a5 +"บาท 0.07%"; 
 
 
                       
